@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS King - Fast Food Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍔 JS King Fast Food</h1>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="burger.jpg" alt="Classic Burger" class="menu-image">
+                <h3>Classic Burger</h3>
+                <p>Juicy beef patty with fresh veggies</p>
+                <div class="item-controls">
+                    <span class="price">$5.99</span>
+                    <button onclick="addToCart('Classic Burger', 5.99)">Add +</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="crispy fries.jpg" alt="Crispy Fries" class="menu-image">
+                <h3>Crispy Fries</h3>
+                <p>Golden fried potato wedges</p>
+                <div class="item-controls">
+                    <span class="price">$3.99</span>
+                    <button onclick="addToCart('Crispy Fries', 3.99)">Add +</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="pepperoni pizza.jpg" alt="Pepperoni Pizza" class="menu-image">
+                <h3>Pepperoni Pizza</h3>
+                <p>Classic pizza with extra cheese</p>
+                <div class="item-controls">
+                    <span class="price">$8.99</span>
+                    <button onclick="addToCart('Pepperoni Pizza', 8.99)">Add +</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="chicken wings.jpg" alt="Chicken Wings" class="menu-image">
+                <h3>Chicken Wings</h3>
+                <p>Crispy fried wings with hot sauce</p>
+                <div class="item-controls">
+                    <span class="price">$6.99</span>
+                    <button onclick="addToCart('Chicken Wings', 6.99)">Add +</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="cheese burger.jpg" alt="Cheeseburger" class="menu-image">
+                <h3>Cheeseburger</h3>
+                <p>Beef patty with melted cheese</p>
+                <div class="item-controls">
+                    <span class="price">$4.99</span>
+                    <button onclick="addToCart('Cheeseburger', 4.99)">Add +</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="garden salad.jpg" alt="Garden Salad" class="menu-image">
+                <h3>Garden Salad</h3>
+                <p>Fresh vegetables with dressing</p>
+                <div class="item-controls">
+                    <span class="price">$5.49</span>
+                    <button onclick="addToCart('Garden Salad', 5.49)">Add +</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="iced Coffe.jpg" alt="Iced Coffee" class="menu-image">
+                <h3>Iced Coffee</h3>
+                <p>Chilled coffee with milk</p>
+                <div class="item-controls">
+                    <span class="price">$3.49</span>
+                    <button onclick="addToCart('Iced Coffee', 3.49)">Add +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-sidebar" id="cart-sidebar">
+            <h2>Your Order</h2>
+            <div id="cart-items"></div>
+            <div class="total-section">
+                <h3>Total: $<span id="total-price">0.00</span></h3>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
